@@ -9,4 +9,17 @@ namespace RingCentral
         public string questionText;
         public bool? showInSignUp;
     }
+
+    public partial class SecretQuestion : Model
+    {
+        public SecretQuestion() : base(null) { }
+
+        protected override string PathSegment
+        {
+            get
+            {
+                return "secretquestion";
+            }
+        }
+    }
 }

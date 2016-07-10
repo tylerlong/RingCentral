@@ -21,4 +21,17 @@ namespace RingCentral
             public string encryptionKey;
         }
     }
+
+    public partial class Subscription : Model
+    {
+        public Subscription() : base(null) { }
+
+        protected override string PathSegment
+        {
+            get
+            {
+                return "subscription";
+            }
+        }
+    }
 }

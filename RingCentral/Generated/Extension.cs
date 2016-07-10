@@ -128,4 +128,17 @@ namespace RingCentral
             public string extensionNumber;
         }
     }
+
+    public partial class Extension : Model
+    {
+        public Extension() : base(null) { }
+
+        protected override string PathSegment
+        {
+            get
+            {
+                return "extension";
+            }
+        }
+    }
 }

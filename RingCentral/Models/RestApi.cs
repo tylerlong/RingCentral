@@ -3,16 +3,8 @@ using Flurl;
 
 namespace RingCentral
 {
-    public partial class RestApi : Model
+    public partial class RestApi
     {
-        protected override string PathSegment
-        {
-            get
-            {
-                return "restapi";
-            }
-        }
-
         protected override string Endpoint
         {
             get
@@ -34,7 +26,6 @@ namespace RingCentral
         {
             this.rc = rc;
         }
-        public RestApi() : base(null) { }
 
         public Task<RestApi> Get(object queryParameters = null)
         {

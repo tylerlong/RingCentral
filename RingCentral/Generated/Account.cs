@@ -62,4 +62,17 @@ namespace RingCentral
         {
         }
     }
+
+    public partial class Account : Model
+    {
+        public Account() : base(null) { }
+
+        protected override string PathSegment
+        {
+            get
+            {
+                return "account";
+            }
+        }
+    }
 }

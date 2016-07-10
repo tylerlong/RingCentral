@@ -13,4 +13,17 @@ namespace RingCentral
         public double? expire_time;
         public double? refresh_token_expire_time;
     }
+
+    public partial class Token : Model
+    {
+        public Token() : base(null) { }
+
+        protected override string PathSegment
+        {
+            get
+            {
+                return "token";
+            }
+        }
+    }
 }

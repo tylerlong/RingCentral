@@ -44,4 +44,17 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class AnsweringRule : Model
+    {
+        public AnsweringRule() : base(null) { }
+
+        protected override string PathSegment
+        {
+            get
+            {
+                return "answeringrule";
+            }
+        }
+    }
 }

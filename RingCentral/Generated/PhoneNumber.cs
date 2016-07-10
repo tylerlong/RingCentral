@@ -20,4 +20,17 @@ namespace RingCentral
             public string extensionNumber;
         }
     }
+
+    public partial class PhoneNumber : Model
+    {
+        public PhoneNumber() : base(null) { }
+
+        protected override string PathSegment
+        {
+            get
+            {
+                return "phonenumber";
+            }
+        }
+    }
 }

@@ -14,4 +14,17 @@ namespace RingCentral
             public string id;
         }
     }
+
+    public partial class State : Model
+    {
+        public State() : base(null) { }
+
+        protected override string PathSegment
+        {
+            get
+            {
+                return "state";
+            }
+        }
+    }
 }

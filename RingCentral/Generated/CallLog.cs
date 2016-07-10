@@ -34,4 +34,17 @@ namespace RingCentral
             public string contentUri;
         }
     }
+
+    public partial class CallLog : Model
+    {
+        public CallLog() : base(null) { }
+
+        protected override string PathSegment
+        {
+            get
+            {
+                return "calllog";
+            }
+        }
+    }
 }

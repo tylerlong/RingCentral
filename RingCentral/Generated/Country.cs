@@ -11,4 +11,17 @@ namespace RingCentral
         public bool? numberSelling;
         public bool? loginAllowed;
     }
+
+    public partial class Country : Model
+    {
+        public Country() : base(null) { }
+
+        protected override string PathSegment
+        {
+            get
+            {
+                return "country";
+            }
+        }
+    }
 }

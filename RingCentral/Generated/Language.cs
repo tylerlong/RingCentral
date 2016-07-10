@@ -11,4 +11,17 @@ namespace RingCentral
         public bool? greeting;
         public bool? formattingLocale;
     }
+
+    public partial class Language : Model
+    {
+        public Language() : base(null) { }
+
+        protected override string PathSegment
+        {
+            get
+            {
+                return "language";
+            }
+        }
+    }
 }

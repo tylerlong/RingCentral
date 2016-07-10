@@ -11,4 +11,17 @@ namespace RingCentral
         public string businessPhone;
         public string mobilePhone;
     }
+
+    public partial class Contact : Model
+    {
+        public Contact() : base(null) { }
+
+        protected override string PathSegment
+        {
+            get
+            {
+                return "contact";
+            }
+        }
+    }
 }
