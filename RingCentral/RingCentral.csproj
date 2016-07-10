@@ -58,6 +58,8 @@
     <Compile Include="Generated\States.cs" />
     <Compile Include="Generated\Subscriptions.cs" />
     <Compile Include="Generated\Timezones.cs" />
+    <Compile Include="RestApi.cs" />
+    <Compile Include="Model.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Flurl">
