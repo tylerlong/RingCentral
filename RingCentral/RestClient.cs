@@ -71,6 +71,10 @@ namespace RingCentral
         /// </summary>
         private void Refresh()
         {
+            if (token == null)
+            {
+                return;
+            }
             var url = new Url(server).AppendPathSegment("/restapi/oauth/token");
             var client = url.WithBasicAuth(appKey, appSecret);
             var requestBody = new { grant_type = "refresh_token", refresh_token = token.refresh_token,
@@ -108,6 +112,22 @@ namespace RingCentral
             var requestBody = new { grant_type = "authorization_code", redirect_uri = redirectUri,
                 code = authCode };
             token = client.PostUrlEncodedAsync(requestBody).ReceiveJson<Token>().Result;
+        }
+
+        /// <summary>
+        /// Revoke acess token
+        /// </summary>
+        public void Revoke()
+        {
+            if (token == null)
+            {
+                return;
+            }
+            var url = new Url(server).AppendPathSegment("/restapi/oauth/revoke");
+            var client = url.WithBasicAuth(appKey, appSecret);
+            var requestBody = new { token = token.access_token };
+            client.PostUrlEncodedAsync(requestBody);
+            token = null;
         }
     }
 }
