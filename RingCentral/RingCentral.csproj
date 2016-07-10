@@ -46,6 +46,18 @@
     <Compile Include="Generated\State.cs" />
     <Compile Include="Generated\Subscription.cs" />
     <Compile Include="Generated\Timezone.cs" />
+    <Compile Include="Generated\AnsweringRules.cs" />
+    <Compile Include="Generated\CallLogs.cs" />
+    <Compile Include="Generated\Contacts.cs" />
+    <Compile Include="Generated\Countries.cs" />
+    <Compile Include="Generated\Extensions.cs" />
+    <Compile Include="Generated\Languages.cs" />
+    <Compile Include="Generated\PhoneNumbers.cs" />
+    <Compile Include="Generated\RestApis.cs" />
+    <Compile Include="Generated\SecretQuestions.cs" />
+    <Compile Include="Generated\States.cs" />
+    <Compile Include="Generated\Subscriptions.cs" />
+    <Compile Include="Generated\Timezones.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Flurl">

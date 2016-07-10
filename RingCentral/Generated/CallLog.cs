@@ -13,6 +13,7 @@ namespace RingCentral
         public string result;
         public To to;
         public From from;
+        public Recording recording;
 
         public class To
         {
@@ -23,6 +24,14 @@ namespace RingCentral
         {
             public string phoneNumber;
             public string location;
+        }
+
+        public class Recording
+        {
+            public string uri;
+            public string id;
+            public string type;
+            public string contentUri;
         }
     }
 }

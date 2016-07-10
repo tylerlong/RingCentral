@@ -1,6 +1,7 @@
 ﻿using Flurl;
 using Flurl.Http;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace RingCentral
 {
@@ -128,6 +129,24 @@ namespace RingCentral
             var requestBody = new { token = token.access_token };
             client.PostUrlEncodedAsync(requestBody);
             token = null;
+        }
+
+
+        public Task<string> Get(string endpoint, object queryParameters = null)
+        {
+            var url = server.AppendPathSegment(endpoint).SetQueryParams(queryParameters);
+            var client = new FlurlClient(url);
+            if (token != null)
+            {
+                client = client.WithOAuthBearerToken(token.access_token);
+            }
+            return client.GetStringAsync();
+        }
+
+        public async Task<T> Get<T>(string endpoint, object queryParameters = null)
+        {
+            var str = await Get(endpoint, queryParameters);
+            return JsonConvert.DeserializeObject<T>(str);
         }
     }
 }

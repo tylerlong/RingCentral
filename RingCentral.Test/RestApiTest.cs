@@ -1,0 +1,20 @@
+﻿using NUnit.Framework;
+
+namespace RingCentral.Test
+{
+    [TestFixture]
+    public class RestApiTest : BaseTest
+    {
+        [Test]
+        public void TestCase()
+        {
+            var str = rc.Get("/restapi").Result;
+            Assert.NotNull(str);
+            Assert.Greater(str.Length, 1);
+            var restApis = rc.Get<RestApis>("/restapi").Result;
+            Assert.NotNull(restApis);
+            Assert.AreEqual(1, restApis.apiVersions.Length);
+            Assert.AreEqual("v1.0", restApis.apiVersions[0].uriString);
+        }
+    }
+}

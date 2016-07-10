@@ -41,6 +41,7 @@
     <Compile Include="BaseTest.cs" />
     <Compile Include="RestClientTest.cs" />
     <Compile Include="OAuthTest.cs" />
+    <Compile Include="RestApiTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
