@@ -24,6 +24,7 @@ namespace RingCentral
 
     public partial class Subscription : Model
     {
+        internal Subscription(Model parent, string _id = null) : base(parent, _id) { }
         public Subscription() : base(null) { }
 
         protected override string PathSegment

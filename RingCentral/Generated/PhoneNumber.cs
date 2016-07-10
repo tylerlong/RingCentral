@@ -23,6 +23,7 @@ namespace RingCentral
 
     public partial class PhoneNumber : Model
     {
+        internal PhoneNumber(Model parent, string _id = null) : base(parent, _id) { }
         public PhoneNumber() : base(null) { }
 
         protected override string PathSegment

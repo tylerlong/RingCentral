@@ -17,6 +17,7 @@ namespace RingCentral
 
     public partial class State : Model
     {
+        internal State(Model parent, string _id = null) : base(parent, _id) { }
         public State() : base(null) { }
 
         protected override string PathSegment

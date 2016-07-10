@@ -4,11 +4,9 @@ namespace RingCentral
 {
     public partial class State : Model
     {
-        internal State(Model parent, string _id = null) : base(parent, _id) { }
-
         public Task<State> Get(object queryParameters = null)
         {
-            return RestClient.Get<State>(Endpoint, queryParameters);
+            return Get<State>(queryParameters);
         }
 
         public Task<States> List(object queryParameters = null)

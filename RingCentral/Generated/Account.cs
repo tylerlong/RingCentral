@@ -65,6 +65,7 @@ namespace RingCentral
 
     public partial class Account : Model
     {
+        internal Account(Model parent, string _id = null) : base(parent, _id) { }
         public Account() : base(null) { }
 
         protected override string PathSegment

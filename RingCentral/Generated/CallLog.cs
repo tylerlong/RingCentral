@@ -37,6 +37,7 @@ namespace RingCentral
 
     public partial class CallLog : Model
     {
+        internal CallLog(Model parent, string _id = null) : base(parent, _id) { }
         public CallLog() : base(null) { }
 
         protected override string PathSegment

@@ -47,6 +47,7 @@ namespace RingCentral
 
     public partial class AnsweringRule : Model
     {
+        internal AnsweringRule(Model parent, string _id = null) : base(parent, _id) { }
         public AnsweringRule() : base(null) { }
 
         protected override string PathSegment

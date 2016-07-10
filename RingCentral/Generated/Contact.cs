@@ -14,6 +14,7 @@ namespace RingCentral
 
     public partial class Contact : Model
     {
+        internal Contact(Model parent, string _id = null) : base(parent, _id) { }
         public Contact() : base(null) { }
 
         protected override string PathSegment

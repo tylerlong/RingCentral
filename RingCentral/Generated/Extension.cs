@@ -131,6 +131,7 @@ namespace RingCentral
 
     public partial class Extension : Model
     {
+        internal Extension(Model parent, string _id = null) : base(parent, _id) { }
         public Extension() : base(null) { }
 
         protected override string PathSegment

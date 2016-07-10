@@ -10,6 +10,7 @@ namespace RingCentral
 
     public partial class RestApi : Model
     {
+        internal RestApi(Model parent, string _id = null) : base(parent, _id) { }
         public RestApi() : base(null) { }
 
         protected override string PathSegment
