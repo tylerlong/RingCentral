@@ -63,6 +63,13 @@
     <Compile Include="Models\Dictionary.cs" />
     <Compile Include="Models\State.cs" />
     <Compile Include="Models\Country.cs" />
+    <Compile Include="Generated\BlockedNumbers.cs" />
+    <Compile Include="Generated\Grants.cs" />
+    <Compile Include="Generated\Groups.cs" />
+    <Compile Include="Generated\Locations.cs" />
+    <Compile Include="Generated\ShippingOptions.cs" />
+    <Compile Include="Generated\BlockedNumber.cs" />
+    <Compile Include="Generated\Group.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Flurl">
