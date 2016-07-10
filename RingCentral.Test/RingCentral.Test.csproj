@@ -43,6 +43,7 @@
     <Compile Include="OAuthTest.cs" />
     <Compile Include="RestApiTest.cs" />
     <Compile Include="StateTest.cs" />
+    <Compile Include="CountryTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

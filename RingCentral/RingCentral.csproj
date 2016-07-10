@@ -62,6 +62,7 @@
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Dictionary.cs" />
     <Compile Include="Models\State.cs" />
+    <Compile Include="Models\Country.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Flurl">
