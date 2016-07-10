@@ -39,6 +39,7 @@
     <Compile Include="TokenTest.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="BaseTest.cs" />
+    <Compile Include="RestClientTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

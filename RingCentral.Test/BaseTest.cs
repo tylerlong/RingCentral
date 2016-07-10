@@ -16,7 +16,7 @@ namespace RingCentral.Test
                 Assert.Ignore();
             }
             rc = new RestClient(Config.Instance.appKey, Config.Instance.appSecret);
-            rc.Login(Config.Instance.username, Config.Instance.extension, Config.Instance.password);
+            rc.Authorize(Config.Instance.username, Config.Instance.extension, Config.Instance.password);
         }
 
         [TearDown]

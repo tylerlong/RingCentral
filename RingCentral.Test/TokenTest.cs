@@ -3,14 +3,14 @@
 namespace RingCentral.Test
 {
     [TestFixture()]
-    public class Test : BaseTest
+    public class TokenTest : BaseTest
     {
         [Test()]
         public void TestCase()
         {
             Assert.IsNotNull(rc);
-            Assert.IsNotNull(rc.Token);
-            Assert.IsNotNull(rc.Token.access_token);
+            Assert.IsNotNull(rc.token);
+            Assert.IsNotNull(rc.token.access_token);
         }
     }
 }
