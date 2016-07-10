@@ -48,12 +48,16 @@ namespace RingCentral
             public int? perPage;
             public int? pageStart;
             public int? pageEnd;
+            public int? totalPages;
+            public int? totalElements;
         }
 
         public class Navigation
         {
             public NextPage nextPage;
             public FirstPage firstPage;
+            public PreviousPage previousPage;
+            public LastPage lastPage;
 
             public class NextPage
             {
@@ -61,6 +65,16 @@ namespace RingCentral
             }
 
             public class FirstPage
+            {
+                public string uri;
+            }
+
+            public class PreviousPage
+            {
+                public string uri;
+            }
+
+            public class LastPage
             {
                 public string uri;
             }

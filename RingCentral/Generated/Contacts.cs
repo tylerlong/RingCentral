@@ -35,6 +35,7 @@ namespace RingCentral
             public NextPage nextPage;
             public FirstPage firstPage;
             public LastPage lastPage;
+            public PreviousPage previousPage;
 
             public class NextPage
             {
@@ -47,6 +48,11 @@ namespace RingCentral
             }
 
             public class LastPage
+            {
+                public string uri;
+            }
+
+            public class PreviousPage
             {
                 public string uri;
             }
