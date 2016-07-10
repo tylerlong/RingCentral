@@ -17,7 +17,7 @@ namespace RingCentral
         {
             get
             {
-                return PathSegment.AppendPathSegment(uriString).Path;
+                return PathSegment.AppendPathSegment(_id).Path;
             }
         }
 
@@ -30,10 +30,9 @@ namespace RingCentral
             }
         }
 
-        internal RestApi(RestClient rc, string uriString = "v1.0") : base(null, null)
+        internal RestApi(RestClient rc, string _id = "v1.0") : base(null, _id)
         {
             this.rc = rc;
-            this.uriString = uriString;
         }
         public RestApi() : base(null) { }
 
