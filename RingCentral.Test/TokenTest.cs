@@ -2,10 +2,10 @@
 
 namespace RingCentral.Test
 {
-    [TestFixture()]
+    [TestFixture]
     public class TokenTest : BaseTest
     {
-        [Test()]
+        [Test]
         public void TestCase()
         {
             Assert.IsNotNull(rc);

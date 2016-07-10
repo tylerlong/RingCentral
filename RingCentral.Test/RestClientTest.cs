@@ -2,10 +2,10 @@
 
 namespace RingCentral.Test
 {
-    [TestFixture()]
+    [TestFixture]
     public class RestClientTest : BaseTest
     {
-        [Test()]
+        [Test]
         public void TestCase()
         {
             Assert.AreEqual("https://platform.ringcentral.com", RestClient.ProductionServer);
