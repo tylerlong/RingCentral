@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System.Threading;
+using Newtonsoft.Json;
 
 namespace RingCentral.Test
 {
@@ -23,6 +24,11 @@ namespace RingCentral.Test
         public void TearDown()
         {
             Thread.Sleep(3000); // there is a rate limit
+        }
+
+        protected void DeepEqual(object obj1, object obj2)
+        {
+            Assert.AreEqual(JsonConvert.SerializeObject(obj1), JsonConvert.SerializeObject(obj2));
         }
     }
 }

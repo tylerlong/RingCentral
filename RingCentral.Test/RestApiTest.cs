@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Newtonsoft.Json;
 
 namespace RingCentral.Test
 {
@@ -23,8 +22,7 @@ namespace RingCentral.Test
         {
             var restApis = rc.Get<RestApis>("/restapi").Result;
             var restApis2 = rc.RestApi().List().Result;
-            Assert.AreEqual(JsonConvert.SerializeObject(restApis),
-                            JsonConvert.SerializeObject(restApis2));
+            DeepEqual(restApis, restApis2);
         }
 
         [Test]
@@ -32,8 +30,7 @@ namespace RingCentral.Test
         {
             var restApi = rc.Get<RestApi>("/restapi/v1.0").Result;
             var restApi2 = rc.RestApi().Get().Result;
-            Assert.AreEqual(JsonConvert.SerializeObject(restApi),
-                            JsonConvert.SerializeObject(restApi2));
+            DeepEqual(restApi, restApi2);
         }
     }
 }

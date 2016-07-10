@@ -60,6 +60,8 @@
     <Compile Include="Generated\Timezones.cs" />
     <Compile Include="Models\RestApi.cs" />
     <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Dictionary.cs" />
+    <Compile Include="Models\State.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Flurl">

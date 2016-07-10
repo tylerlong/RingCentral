@@ -29,7 +29,7 @@ namespace RingCentral
 
         public Task<RestApi> Get(object queryParameters = null)
         {
-            return RestClient.Get<RestApi>(Endpoint, queryParameters);
+            return Get<RestApi>(queryParameters);
         }
 
         public Task<RestApis> List(object queryParameters = null)
