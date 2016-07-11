@@ -131,7 +131,6 @@ namespace RingCentral
             token = null;
         }
 
-
         public Task<string> Get(string endpoint, object queryParams = null)
         {
             var url = server.AppendPathSegment(endpoint).SetQueryParams(queryParams);
@@ -147,6 +146,11 @@ namespace RingCentral
         {
             var str = await Get(endpoint, queryParams);
             return JsonConvert.DeserializeObject<T>(str);
+        }
+
+        public RestApi RestApi(string uriString = "v1.0")
+        {
+            return new RestApi(new MockModel(this), uriString);
         }
     }
 }

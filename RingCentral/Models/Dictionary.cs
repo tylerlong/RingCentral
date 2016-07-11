@@ -1,8 +1,8 @@
 ﻿namespace RingCentral
 {
-    public class Dictionary : Model
+    public partial class Dictionary : Model
     {
-        internal Dictionary(Model parent) : base(parent) { }
+        internal Dictionary(Model parent, string _id = null) : base(parent) { }
 
         protected override string PathSegment
         {
@@ -10,14 +10,6 @@
             {
                 return "dictionary";
             }
-        }
-    }
-
-    public static class DictionaryExtensions
-    {
-        public static Dictionary Dictionary(this RestApi restApi)
-        {
-            return new Dictionary(restApi);
         }
     }
 }
