@@ -10,12 +10,27 @@ namespace RingCentral
         {
             return new Dictionary(this, _id);
         }
+        public Subscription Subscription(string _id = null)
+        {
+            return new Subscription(this, _id);
+        }
     }
     public partial class Account
     {
         public Extension Extension(string _id = null)
         {
             return new Extension(this, _id);
+        }
+        public Order Order(string _id = null)
+        {
+            return new Order(this, _id);
+        }
+    }
+    public partial class Extension
+    {
+        public Meeting Meeting(string _id = null)
+        {
+            return new Meeting(this, _id);
         }
     }
     public partial class Dictionary

@@ -34,6 +34,14 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TokenTest.cs" />
@@ -49,6 +57,7 @@
     <Compile Include="SecretQuestionTest.cs" />
     <Compile Include="ShippingOption.cs" />
     <Compile Include="TimezoneTest.cs" />
+    <Compile Include="SubscriptionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
