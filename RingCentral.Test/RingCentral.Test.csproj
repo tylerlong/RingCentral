@@ -48,6 +48,7 @@
     <Compile Include="LocationTest.cs" />
     <Compile Include="SecretQuestionTest.cs" />
     <Compile Include="ShippingOption.cs" />
+    <Compile Include="TimezoneTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
