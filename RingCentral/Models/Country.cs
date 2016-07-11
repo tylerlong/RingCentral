@@ -2,7 +2,7 @@
 
 namespace RingCentral
 {
-    public partial class Country : Model
+    public partial class Country
     {
         public Task<Countries> List(object queryParams = null)
         {

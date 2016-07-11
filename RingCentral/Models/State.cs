@@ -2,7 +2,7 @@
 
 namespace RingCentral
 {
-    public partial class State : Model
+    public partial class State
     {
         public Task<States> List(object queryParams = null)
         {
