@@ -66,4 +66,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class PhoneNumber
+    {
+        public System.Threading.Tasks.Task<PhoneNumbers> List(object queryParams = null)
+        {
+            return List<PhoneNumbers>(queryParams);
+        }
+    }
 }

@@ -61,4 +61,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class Grant
+    {
+        public System.Threading.Tasks.Task<Grants> List(object queryParams = null)
+        {
+            return List<Grants>(queryParams);
+        }
+    }
 }

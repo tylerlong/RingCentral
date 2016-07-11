@@ -4,10 +4,6 @@ namespace RingCentral
 {
     public partial class State
     {
-        public Task<States> List(object queryParams = null)
-        {
-            return List<States>(queryParams);
-        }
     }
 
     public static class StateExtensions

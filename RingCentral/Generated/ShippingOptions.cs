@@ -58,4 +58,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class ShippingOption
+    {
+        public System.Threading.Tasks.Task<ShippingOptions> List(object queryParams = null)
+        {
+            return List<ShippingOptions>(queryParams);
+        }
+    }
 }

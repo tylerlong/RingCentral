@@ -15,7 +15,6 @@ namespace RingCentral
     public partial class Language : Model
     {
         internal Language(Model parent, string _id = null) : base(parent, _id) { }
-        public Language() : base(null) { }
 
         protected override string PathSegment
         {
@@ -24,11 +23,15 @@ namespace RingCentral
                 return "language";
             }
         }
+    }
+
+    public partial class Language : Model
+    {
+        public Language() : base(null) { }
 
         public System.Threading.Tasks.Task<Language> Get(object queryParams = null)
         {
             return Get<Language>(queryParams);
         }
     }
-
 }

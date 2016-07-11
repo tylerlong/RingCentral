@@ -18,7 +18,6 @@ namespace RingCentral
     public partial class Group : Model
     {
         internal Group(Model parent, string _id = null) : base(parent, _id) { }
-        public Group() : base(null) { }
 
         protected override string PathSegment
         {
@@ -27,11 +26,15 @@ namespace RingCentral
                 return "group";
             }
         }
+    }
+
+    public partial class Group : Model
+    {
+        public Group() : base(null) { }
 
         public System.Threading.Tasks.Task<Group> Get(object queryParams = null)
         {
             return Get<Group>(queryParams);
         }
     }
-
 }

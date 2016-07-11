@@ -53,4 +53,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class Timezone
+    {
+        public System.Threading.Tasks.Task<Timezones> List(object queryParams = null)
+        {
+            return List<Timezones>(queryParams);
+        }
+    }
 }

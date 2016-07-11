@@ -13,7 +13,6 @@ namespace RingCentral
     public partial class SecretQuestion : Model
     {
         internal SecretQuestion(Model parent, string _id = null) : base(parent, _id) { }
-        public SecretQuestion() : base(null) { }
 
         protected override string PathSegment
         {
@@ -22,11 +21,15 @@ namespace RingCentral
                 return "secretquestion";
             }
         }
+    }
+
+    public partial class SecretQuestion : Model
+    {
+        public SecretQuestion() : base(null) { }
 
         public System.Threading.Tasks.Task<SecretQuestion> Get(object queryParams = null)
         {
             return Get<SecretQuestion>(queryParams);
         }
     }
-
 }

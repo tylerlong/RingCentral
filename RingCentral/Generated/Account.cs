@@ -66,7 +66,6 @@ namespace RingCentral
     public partial class Account : Model
     {
         internal Account(Model parent, string _id = null) : base(parent, _id) { }
-        public Account() : base(null) { }
 
         protected override string PathSegment
         {
@@ -75,11 +74,15 @@ namespace RingCentral
                 return "account";
             }
         }
+    }
+
+    public partial class Account : Model
+    {
+        public Account() : base(null) { }
 
         public System.Threading.Tasks.Task<Account> Get(object queryParams = null)
         {
             return Get<Account>(queryParams);
         }
     }
-
 }

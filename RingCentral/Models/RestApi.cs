@@ -4,10 +4,6 @@ namespace RingCentral
 {
     public partial class RestApi
     {
-        public Task<RestApis> List(object queryParams = null)
-        {
-            return List<RestApis>(queryParams);
-        }
     }
 
     public static class RestApiExtensions

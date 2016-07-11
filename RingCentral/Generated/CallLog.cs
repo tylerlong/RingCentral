@@ -38,7 +38,6 @@ namespace RingCentral
     public partial class CallLog : Model
     {
         internal CallLog(Model parent, string _id = null) : base(parent, _id) { }
-        public CallLog() : base(null) { }
 
         protected override string PathSegment
         {
@@ -47,11 +46,15 @@ namespace RingCentral
                 return "calllog";
             }
         }
+    }
+
+    public partial class CallLog : Model
+    {
+        public CallLog() : base(null) { }
 
         public System.Threading.Tasks.Task<CallLog> Get(object queryParams = null)
         {
             return Get<CallLog>(queryParams);
         }
     }
-
 }

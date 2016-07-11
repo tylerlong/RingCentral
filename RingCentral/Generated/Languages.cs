@@ -57,4 +57,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class Language
+    {
+        public System.Threading.Tasks.Task<Languages> List(object queryParams = null)
+        {
+            return List<Languages>(queryParams);
+        }
+    }
 }

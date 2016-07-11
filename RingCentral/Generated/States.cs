@@ -60,4 +60,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class State
+    {
+        public System.Threading.Tasks.Task<States> List(object queryParams = null)
+        {
+            return List<States>(queryParams);
+        }
+    }
 }

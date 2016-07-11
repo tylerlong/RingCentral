@@ -60,4 +60,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class Location
+    {
+        public System.Threading.Tasks.Task<Locations> List(object queryParams = null)
+        {
+            return List<Locations>(queryParams);
+        }
+    }
 }

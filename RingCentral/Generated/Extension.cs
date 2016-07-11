@@ -132,7 +132,6 @@ namespace RingCentral
     public partial class Extension : Model
     {
         internal Extension(Model parent, string _id = null) : base(parent, _id) { }
-        public Extension() : base(null) { }
 
         protected override string PathSegment
         {
@@ -141,11 +140,15 @@ namespace RingCentral
                 return "extension";
             }
         }
+    }
+
+    public partial class Extension : Model
+    {
+        public Extension() : base(null) { }
 
         public System.Threading.Tasks.Task<Extension> Get(object queryParams = null)
         {
             return Get<Extension>(queryParams);
         }
     }
-
 }

@@ -15,7 +15,6 @@ namespace RingCentral
     public partial class Contact : Model
     {
         internal Contact(Model parent, string _id = null) : base(parent, _id) { }
-        public Contact() : base(null) { }
 
         protected override string PathSegment
         {
@@ -24,11 +23,15 @@ namespace RingCentral
                 return "contact";
             }
         }
+    }
+
+    public partial class Contact : Model
+    {
+        public Contact() : base(null) { }
 
         public System.Threading.Tasks.Task<Contact> Get(object queryParams = null)
         {
             return Get<Contact>(queryParams);
         }
     }
-
 }

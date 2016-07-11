@@ -48,7 +48,6 @@ namespace RingCentral
     public partial class AnsweringRule : Model
     {
         internal AnsweringRule(Model parent, string _id = null) : base(parent, _id) { }
-        public AnsweringRule() : base(null) { }
 
         protected override string PathSegment
         {
@@ -57,11 +56,15 @@ namespace RingCentral
                 return "answeringrule";
             }
         }
+    }
+
+    public partial class AnsweringRule : Model
+    {
+        public AnsweringRule() : base(null) { }
 
         public System.Threading.Tasks.Task<AnsweringRule> Get(object queryParams = null)
         {
             return Get<AnsweringRule>(queryParams);
         }
     }
-
 }

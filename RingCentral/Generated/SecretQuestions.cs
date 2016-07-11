@@ -55,4 +55,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class SecretQuestion
+    {
+        public System.Threading.Tasks.Task<SecretQuestions> List(object queryParams = null)
+        {
+            return List<SecretQuestions>(queryParams);
+        }
+    }
 }

@@ -27,4 +27,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class Subscription
+    {
+        public System.Threading.Tasks.Task<Subscriptions> List(object queryParams = null)
+        {
+            return List<Subscriptions>(queryParams);
+        }
+    }
 }

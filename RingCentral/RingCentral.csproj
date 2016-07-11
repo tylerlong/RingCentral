@@ -71,6 +71,10 @@
     <Compile Include="Generated\BlockedNumber.cs" />
     <Compile Include="Generated\Group.cs" />
     <Compile Include="Models\MockModel.cs" />
+    <Compile Include="Routes.cs" />
+    <Compile Include="Generated\Grant.cs" />
+    <Compile Include="Generated\Location.cs" />
+    <Compile Include="Generated\ShippingOption.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Flurl">

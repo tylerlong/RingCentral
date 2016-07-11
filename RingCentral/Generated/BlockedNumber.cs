@@ -11,7 +11,6 @@ namespace RingCentral
     public partial class BlockedNumber : Model
     {
         internal BlockedNumber(Model parent, string _id = null) : base(parent, _id) { }
-        public BlockedNumber() : base(null) { }
 
         protected override string PathSegment
         {
@@ -20,11 +19,15 @@ namespace RingCentral
                 return "blockednumber";
             }
         }
+    }
+
+    public partial class BlockedNumber : Model
+    {
+        public BlockedNumber() : base(null) { }
 
         public System.Threading.Tasks.Task<BlockedNumber> Get(object queryParams = null)
         {
             return Get<BlockedNumber>(queryParams);
         }
     }
-
 }

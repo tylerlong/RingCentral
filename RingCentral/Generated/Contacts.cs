@@ -63,4 +63,12 @@ namespace RingCentral
             public string uri;
         }
     }
+
+    public partial class Contact
+    {
+        public System.Threading.Tasks.Task<Contacts> List(object queryParams = null)
+        {
+            return List<Contacts>(queryParams);
+        }
+    }
 }

@@ -80,4 +80,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class CallLog
+    {
+        public System.Threading.Tasks.Task<CallLogs> List(object queryParams = null)
+        {
+            return List<CallLogs>(queryParams);
+        }
+    }
 }

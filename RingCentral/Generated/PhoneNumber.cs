@@ -24,7 +24,6 @@ namespace RingCentral
     public partial class PhoneNumber : Model
     {
         internal PhoneNumber(Model parent, string _id = null) : base(parent, _id) { }
-        public PhoneNumber() : base(null) { }
 
         protected override string PathSegment
         {
@@ -33,11 +32,15 @@ namespace RingCentral
                 return "phonenumber";
             }
         }
+    }
+
+    public partial class PhoneNumber : Model
+    {
+        public PhoneNumber() : base(null) { }
 
         public System.Threading.Tasks.Task<PhoneNumber> Get(object queryParams = null)
         {
             return Get<PhoneNumber>(queryParams);
         }
     }
-
 }

@@ -98,4 +98,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class Extension
+    {
+        public System.Threading.Tasks.Task<Extensions> List(object queryParams = null)
+        {
+            return List<Extensions>(queryParams);
+        }
+    }
 }

@@ -57,4 +57,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class Country
+    {
+        public System.Threading.Tasks.Task<Countries> List(object queryParams = null)
+        {
+            return List<Countries>(queryParams);
+        }
+    }
 }

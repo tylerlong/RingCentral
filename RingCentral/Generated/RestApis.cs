@@ -15,4 +15,12 @@ namespace RingCentral
             public string uriString;
         }
     }
+
+    public partial class RestApi
+    {
+        public System.Threading.Tasks.Task<RestApis> List(object queryParams = null)
+        {
+            return List<RestApis>(queryParams);
+        }
+    }
 }

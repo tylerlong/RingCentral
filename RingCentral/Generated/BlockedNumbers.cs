@@ -53,4 +53,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class BlockedNumber
+    {
+        public System.Threading.Tasks.Task<BlockedNumbers> List(object queryParams = null)
+        {
+            return List<BlockedNumbers>(queryParams);
+        }
+    }
 }

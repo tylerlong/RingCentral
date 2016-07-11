@@ -54,4 +54,12 @@ namespace RingCentral
             }
         }
     }
+
+    public partial class AnsweringRule
+    {
+        public System.Threading.Tasks.Task<AnsweringRules> List(object queryParams = null)
+        {
+            return List<AnsweringRules>(queryParams);
+        }
+    }
 }

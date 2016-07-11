@@ -15,7 +15,6 @@ namespace RingCentral
     public partial class Country : Model
     {
         internal Country(Model parent, string _id = null) : base(parent, _id) { }
-        public Country() : base(null) { }
 
         protected override string PathSegment
         {
@@ -24,11 +23,15 @@ namespace RingCentral
                 return "country";
             }
         }
+    }
+
+    public partial class Country : Model
+    {
+        public Country() : base(null) { }
 
         public System.Threading.Tasks.Task<Country> Get(object queryParams = null)
         {
             return Get<Country>(queryParams);
         }
     }
-
 }
