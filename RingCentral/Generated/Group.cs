@@ -27,5 +27,11 @@ namespace RingCentral
                 return "group";
             }
         }
+
+        public System.Threading.Tasks.Task<Group> Get(object queryParams = null)
+        {
+            return Get<Group>(queryParams);
+        }
     }
+
 }

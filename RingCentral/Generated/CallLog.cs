@@ -47,5 +47,11 @@ namespace RingCentral
                 return "calllog";
             }
         }
+
+        public System.Threading.Tasks.Task<CallLog> Get(object queryParams = null)
+        {
+            return Get<CallLog>(queryParams);
+        }
     }
+
 }

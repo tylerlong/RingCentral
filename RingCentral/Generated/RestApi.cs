@@ -20,5 +20,11 @@ namespace RingCentral
                 return "restapi";
             }
         }
+
+        public System.Threading.Tasks.Task<RestApi> Get(object queryParams = null)
+        {
+            return Get<RestApi>(queryParams);
+        }
     }
+
 }

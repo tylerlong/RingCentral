@@ -20,5 +20,11 @@ namespace RingCentral
                 return "timezone";
             }
         }
+
+        public System.Threading.Tasks.Task<Timezone> Get(object queryParams = null)
+        {
+            return Get<Timezone>(queryParams);
+        }
     }
+
 }

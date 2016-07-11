@@ -34,5 +34,11 @@ namespace RingCentral
                 return "subscription";
             }
         }
+
+        public System.Threading.Tasks.Task<Subscription> Get(object queryParams = null)
+        {
+            return Get<Subscription>(queryParams);
+        }
     }
+
 }

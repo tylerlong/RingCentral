@@ -141,5 +141,11 @@ namespace RingCentral
                 return "extension";
             }
         }
+
+        public System.Threading.Tasks.Task<Extension> Get(object queryParams = null)
+        {
+            return Get<Extension>(queryParams);
+        }
     }
+
 }

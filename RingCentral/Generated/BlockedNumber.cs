@@ -20,5 +20,11 @@ namespace RingCentral
                 return "blockednumber";
             }
         }
+
+        public System.Threading.Tasks.Task<BlockedNumber> Get(object queryParams = null)
+        {
+            return Get<BlockedNumber>(queryParams);
+        }
     }
+
 }

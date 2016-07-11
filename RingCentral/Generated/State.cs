@@ -27,5 +27,11 @@ namespace RingCentral
                 return "state";
             }
         }
+
+        public System.Threading.Tasks.Task<State> Get(object queryParams = null)
+        {
+            return Get<State>(queryParams);
+        }
     }
+
 }

@@ -22,5 +22,11 @@ namespace RingCentral
                 return "secretquestion";
             }
         }
+
+        public System.Threading.Tasks.Task<SecretQuestion> Get(object queryParams = null)
+        {
+            return Get<SecretQuestion>(queryParams);
+        }
     }
+
 }

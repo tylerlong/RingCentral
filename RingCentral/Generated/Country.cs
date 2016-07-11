@@ -24,5 +24,11 @@ namespace RingCentral
                 return "country";
             }
         }
+
+        public System.Threading.Tasks.Task<Country> Get(object queryParams = null)
+        {
+            return Get<Country>(queryParams);
+        }
     }
+
 }

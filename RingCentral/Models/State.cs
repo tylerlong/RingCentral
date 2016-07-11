@@ -4,11 +4,6 @@ namespace RingCentral
 {
     public partial class State : Model
     {
-        public Task<State> Get(object queryParams = null)
-        {
-            return Get<State>(queryParams);
-        }
-
         public Task<States> List(object queryParams = null)
         {
             return List<States>(queryParams);

@@ -75,5 +75,11 @@ namespace RingCentral
                 return "account";
             }
         }
+
+        public System.Threading.Tasks.Task<Account> Get(object queryParams = null)
+        {
+            return Get<Account>(queryParams);
+        }
     }
+
 }

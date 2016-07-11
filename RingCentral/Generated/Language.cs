@@ -24,5 +24,11 @@ namespace RingCentral
                 return "language";
             }
         }
+
+        public System.Threading.Tasks.Task<Language> Get(object queryParams = null)
+        {
+            return Get<Language>(queryParams);
+        }
     }
+
 }

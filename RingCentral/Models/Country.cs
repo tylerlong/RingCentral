@@ -4,11 +4,6 @@ namespace RingCentral
 {
     public partial class Country : Model
     {
-        public Task<Country> Get(object queryParams = null)
-        {
-            return Get<Country>(queryParams);
-        }
-
         public Task<Countries> List(object queryParams = null)
         {
             return List<Countries>(queryParams);

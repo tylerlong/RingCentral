@@ -24,5 +24,11 @@ namespace RingCentral
                 return "token";
             }
         }
+
+        public System.Threading.Tasks.Task<Token> Get(object queryParams = null)
+        {
+            return Get<Token>(queryParams);
+        }
     }
+
 }

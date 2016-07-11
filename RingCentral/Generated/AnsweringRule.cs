@@ -57,5 +57,11 @@ namespace RingCentral
                 return "answeringrule";
             }
         }
+
+        public System.Threading.Tasks.Task<AnsweringRule> Get(object queryParams = null)
+        {
+            return Get<AnsweringRule>(queryParams);
+        }
     }
+
 }

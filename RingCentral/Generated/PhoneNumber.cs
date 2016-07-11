@@ -33,5 +33,11 @@ namespace RingCentral
                 return "phonenumber";
             }
         }
+
+        public System.Threading.Tasks.Task<PhoneNumber> Get(object queryParams = null)
+        {
+            return Get<PhoneNumber>(queryParams);
+        }
     }
+
 }

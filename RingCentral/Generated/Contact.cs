@@ -24,5 +24,11 @@ namespace RingCentral
                 return "contact";
             }
         }
+
+        public System.Threading.Tasks.Task<Contact> Get(object queryParams = null)
+        {
+            return Get<Contact>(queryParams);
+        }
     }
+
 }
