@@ -30,7 +30,7 @@ namespace RingCentral.Test
         [TearDown]
         public void TearDown()
         {
-            Thread.Sleep(3000); // there is a rate limit
+            Thread.Sleep(5000); // there is a rate limit
         }
 
         protected void DeepEqual(object obj1, object obj2)
