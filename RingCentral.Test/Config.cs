@@ -29,7 +29,7 @@ namespace RingCentral.Test
 
     public partial class Config
     {
-        public bool? sandbox;
+        public bool? production;
         public string server;
         public string appKey;
         public string appSecret;

@@ -16,7 +16,14 @@ namespace RingCentral.Test
             {
                 Assert.Ignore();
             }
-            rc = new RestClient(Config.Instance.appKey, Config.Instance.appSecret);
+            if (!string.IsNullOrWhiteSpace(Config.Instance.server))
+            {
+                rc = new RestClient(Config.Instance.appKey, Config.Instance.appSecret, Config.Instance.server);
+            }
+            else
+            {
+                rc = new RestClient(Config.Instance.appKey, Config.Instance.appSecret, Config.Instance.production);
+            }
             rc.Authorize(Config.Instance.username, Config.Instance.extension, Config.Instance.password);
         }
 
