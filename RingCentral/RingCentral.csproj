@@ -70,6 +70,7 @@
     <Compile Include="Generated\ShippingOptions.cs" />
     <Compile Include="Generated\BlockedNumber.cs" />
     <Compile Include="Generated\Group.cs" />
+    <Compile Include="Models\MockModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Flurl">
