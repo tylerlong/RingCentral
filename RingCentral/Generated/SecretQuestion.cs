@@ -18,7 +18,7 @@ namespace RingCentral
         {
             get
             {
-                return "secretquestion";
+                return "secret-question";
             }
         }
     }

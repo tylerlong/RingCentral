@@ -43,7 +43,7 @@ namespace RingCentral
         {
             get
             {
-                return "calllog";
+                return "call-log";
             }
         }
     }

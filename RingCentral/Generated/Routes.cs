@@ -36,5 +36,17 @@ namespace RingCentral
         {
             return new Location(this, _id);
         }
+        public SecretQuestion SecretQuestion(string _id = null)
+        {
+            return new SecretQuestion(this, _id);
+        }
+        public ShippingOption ShippingOption(string _id = null)
+        {
+            return new ShippingOption(this, _id);
+        }
+        public Timezone Timezone(string _id = null)
+        {
+            return new Timezone(this, _id);
+        }
     }
 }

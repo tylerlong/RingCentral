@@ -29,7 +29,7 @@ namespace RingCentral
         {
             get
             {
-                return "phonenumber";
+                return "phone-number";
             }
         }
     }

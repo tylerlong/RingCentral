@@ -46,6 +46,7 @@
     <Compile Include="CountryTest.cs" />
     <Compile Include="LanguageTest.cs" />
     <Compile Include="LocationTest.cs" />
+    <Compile Include="SecretQuestionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

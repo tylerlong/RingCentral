@@ -53,7 +53,7 @@ namespace RingCentral
         {
             get
             {
-                return "answeringrule";
+                return "answering-rule";
             }
         }
     }

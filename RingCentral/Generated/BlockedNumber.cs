@@ -16,7 +16,7 @@ namespace RingCentral
         {
             get
             {
-                return "blockednumber";
+                return "blocked-number";
             }
         }
     }
