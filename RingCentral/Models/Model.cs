@@ -36,14 +36,14 @@ namespace RingCentral
             }
         }
 
-        protected Task<T> Get<T>(object queryParameters = null) where T : Model
+        protected Task<T> Get<T>(object queryParams = null) where T : Model
         {
-            return RestClient.Get<T>(Endpoint, queryParameters);
+            return RestClient.Get<T>(Endpoint, queryParams);
         }
 
-        protected Task<T> List<T>(object queryParameters = null) where T : new()
+        protected Task<T> List<T>(object queryParams = null) where T : new()
         {
-            return RestClient.Get<T>(parent.Endpoint.AppendPathSegment(PathSegment).Path, queryParameters);
+            return RestClient.Get<T>(parent.Endpoint.AppendPathSegment(PathSegment).Path, queryParams);
         }
     }
 }

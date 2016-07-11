@@ -27,14 +27,14 @@ namespace RingCentral
             this.rc = rc;
         }
 
-        public Task<RestApi> Get(object queryParameters = null)
+        public Task<RestApi> Get(object queryParams = null)
         {
-            return Get<RestApi>(queryParameters);
+            return Get<RestApi>(queryParams);
         }
 
-        public Task<RestApis> List(object queryParameters = null)
+        public Task<RestApis> List(object queryParams = null)
         {
-            return RestClient.Get<RestApis>(PathSegment, queryParameters);
+            return RestClient.Get<RestApis>(PathSegment, queryParams);
         }
     }
 

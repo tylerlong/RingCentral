@@ -22,7 +22,7 @@ namespace RingCentral.Test
             }
             else
             {
-                rc = new RestClient(Config.Instance.appKey, Config.Instance.appSecret, Config.Instance.production);
+                rc = new RestClient(Config.Instance.appKey, Config.Instance.appSecret, Config.Instance.production.Value);
             }
             rc.Authorize(Config.Instance.username, Config.Instance.extension, Config.Instance.password);
         }

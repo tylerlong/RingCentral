@@ -132,9 +132,9 @@ namespace RingCentral
         }
 
 
-        public Task<string> Get(string endpoint, object queryParameters = null)
+        public Task<string> Get(string endpoint, object queryParams = null)
         {
-            var url = server.AppendPathSegment(endpoint).SetQueryParams(queryParameters);
+            var url = server.AppendPathSegment(endpoint).SetQueryParams(queryParams);
             var client = new FlurlClient(url);
             if (token != null)
             {
@@ -143,9 +143,9 @@ namespace RingCentral
             return client.GetStringAsync();
         }
 
-        public async Task<T> Get<T>(string endpoint, object queryParameters = null)
+        public async Task<T> Get<T>(string endpoint, object queryParams = null)
         {
-            var str = await Get(endpoint, queryParameters);
+            var str = await Get(endpoint, queryParams);
             return JsonConvert.DeserializeObject<T>(str);
         }
     }
