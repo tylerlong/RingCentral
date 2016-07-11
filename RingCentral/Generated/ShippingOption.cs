@@ -12,7 +12,7 @@ namespace RingCentral
         {
             get
             {
-                return "shipping-option";
+                return "shipping-options";
             }
         }
     }
