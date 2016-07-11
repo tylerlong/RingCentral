@@ -1,12 +1,11 @@
 ﻿using Flurl;
 using Flurl.Http;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using System.Net.Http;
+
 
 namespace RingCentral
 {
-    public class RestClient
+    public partial class RestClient
     {
         public const string SandboxServer = "https://platform.devtest.ringcentral.com";
         public const string ProductionServer = "https://platform.ringcentral.com";
@@ -132,44 +131,7 @@ namespace RingCentral
             token = null;
         }
 
-        public Task<string> Get(string endpoint, object queryParams = null)
-        {
-            var url = server.AppendPathSegment(endpoint).SetQueryParams(queryParams);
-            var client = new FlurlClient(url);
-            if (token != null)
-            {
-                client = client.WithOAuthBearerToken(token.access_token);
-            }
-            return client.GetStringAsync();
-        }
 
-        public async Task<T> Get<T>(string endpoint, object queryParams = null)
-        {
-            var str = await Get(endpoint, queryParams);
-            return JsonConvert.DeserializeObject<T>(str);
-        }
-
-        public Task<HttpResponseMessage> Post(string endpoint, object requestBody, object queryParams = null)
-        {
-            var url = server.AppendPathSegment(endpoint).SetQueryParams(queryParams);
-            var client = new FlurlClient(url);
-            if (token != null)
-            {
-                client = client.WithOAuthBearerToken(token.access_token);
-            }
-            return client.PostJsonAsync(requestBody);
-        }
-
-        public Task<HttpResponseMessage> Delete(string endpoint)
-        {
-            var url = server.AppendPathSegment(endpoint);
-            var client = new FlurlClient(url);
-            if (token != null)
-            {
-                client = client.WithOAuthBearerToken(token.access_token);
-            }
-            return client.DeleteAsync();
-        }
 
         public RestApi RestApi(string uriString = "v1.0")
         {

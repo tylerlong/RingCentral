@@ -73,6 +73,7 @@
     <Compile Include="MockModel.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Temp.cs" />
+    <Compile Include="Http.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Flurl">
