@@ -1,5 +1,4 @@
-﻿using System;
-namespace RingCentral
+﻿namespace RingCentral
 {
     public class Dictionary : Model
     {

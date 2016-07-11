@@ -75,6 +75,7 @@
     <Compile Include="Generated\Grant.cs" />
     <Compile Include="Generated\Location.cs" />
     <Compile Include="Generated\ShippingOption.cs" />
+    <Compile Include="Models\Language.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Flurl">

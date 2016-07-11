@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace RingCentral
+﻿namespace RingCentral
 {
     public partial class State
     {
