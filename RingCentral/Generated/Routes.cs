@@ -32,5 +32,9 @@ namespace RingCentral
         {
             return new Country(this, _id);
         }
+        public Location Location(string _id = null)
+        {
+            return new Location(this, _id);
+        }
     }
 }
