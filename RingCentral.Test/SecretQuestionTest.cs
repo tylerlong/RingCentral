@@ -6,7 +6,7 @@ namespace RingCentral.Test
     public class SecretQuestionTest : BaseTest
     {
         [Test]
-        public void TestCase()
+        public void TestGet()
         {
             var sq = rc.Get<SecretQuestion>("/restapi/v1.0/dictionary/secret-question/3").Result;
             Assert.NotNull(sq);
@@ -17,7 +17,7 @@ namespace RingCentral.Test
         }
 
         [Test]
-        public void TestCase2()
+        public void TestList()
         {
             var sqs = rc.Get<SecretQuestions>("/restapi/v1.0/dictionary/secret-question").Result;
             Assert.NotNull(sqs);

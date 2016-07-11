@@ -6,7 +6,7 @@ namespace RingCentral.Test
     public class CountryTest : BaseTest
     {
         [Test]
-        public void TestCase()
+        public void TestGet()
         {
             var country = rc.Get<Country>("/restapi/v1.0/dictionary/country/46").Result;
             Assert.NotNull(country);
@@ -17,7 +17,7 @@ namespace RingCentral.Test
         }
 
         [Test]
-        public void TestCase2()
+        public void TestList()
         {
             var countries = rc.Get<Countries>("/restapi/v1.0/dictionary/country").Result;
             Assert.NotNull(countries);

@@ -6,7 +6,7 @@ namespace RingCentral.Test
     public class LocationTest : BaseTest
     {
         [Test]
-        public void TestCase()
+        public void TestList()
         {
             var locations = rc.Get<Locations>("/restapi/v1.0/dictionary/location", new {  stateId = "16" }).Result;
             Assert.NotNull(locations);

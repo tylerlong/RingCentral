@@ -6,7 +6,7 @@ namespace RingCentral.Test
     public class LanguageTest : BaseTest
     {
         [Test]
-        public void TestCase()
+        public void TestGet()
         {
             var language = rc.Get<Language>("/restapi/v1.0/dictionary/language/1033").Result;
             Assert.NotNull(language);
@@ -17,7 +17,7 @@ namespace RingCentral.Test
         }
 
         [Test]
-        public void TestCase2()
+        public void TestList()
         {
             var languages = rc.Get<Languages>("/restapi/v1.0/dictionary/language").Result;
             Assert.NotNull(languages);

@@ -6,31 +6,24 @@ namespace RingCentral.Test
     public class RestApiTest : BaseTest
     {
         [Test]
-        public void TestCase()
+        public void TestGet()
         {
-            var str = rc.Get("/restapi").Result;
-            Assert.NotNull(str);
-            Assert.Greater(str.Length, 1);
+            var restApi = rc.Get<RestApi>("/restapi/v1.0").Result;
+            Assert.NotNull(restApi);
+            Assert.AreEqual("v1.0", restApi.uriString);
+            var restApi2 = rc.RestApi().Get().Result;
+            DeepEqual(restApi, restApi2);
+        }
+
+        [Test]
+        public void TestList()
+        {
             var restApis = rc.Get<RestApis>("/restapi").Result;
             Assert.NotNull(restApis);
             Assert.AreEqual(1, restApis.apiVersions.Length);
             Assert.AreEqual("v1.0", restApis.apiVersions[0].uriString);
-        }
-
-        [Test]
-        public void TestCase2()
-        {
-            var restApis = rc.Get<RestApis>("/restapi").Result;
             var restApis2 = rc.RestApi().List().Result;
             DeepEqual(restApis, restApis2);
-        }
-
-        [Test]
-        public void TestCase3()
-        {
-            var restApi = rc.Get<RestApi>("/restapi/v1.0").Result;
-            var restApi2 = rc.RestApi().Get().Result;
-            DeepEqual(restApi, restApi2);
         }
     }
 }

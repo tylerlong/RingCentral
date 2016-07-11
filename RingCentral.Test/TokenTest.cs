@@ -6,7 +6,7 @@ namespace RingCentral.Test
     public class TokenTest : BaseTest
     {
         [Test]
-        public void TestCase()
+        public void TestToken()
         {
             Assert.IsNotNull(rc);
             Assert.IsNotNull(rc.token);

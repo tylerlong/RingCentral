@@ -6,7 +6,7 @@ namespace RingCentral.Test
     public class RestClientTest : BaseTest
     {
         [Test]
-        public void TestCase()
+        public void TestRestClient()
         {
             Assert.AreEqual("https://platform.ringcentral.com", RestClient.ProductionServer);
             Assert.AreEqual("https://platform.devtest.ringcentral.com", RestClient.SandboxServer);

@@ -7,7 +7,7 @@ namespace RingCentral.Test
     public class OAuthTest : BaseTest
     {
         [Test]
-        public void TestCase()
+        public void TestAuthorizeUri()
         {
             var redirectUri = "http://localhost:3000";
             var state = "myState";
