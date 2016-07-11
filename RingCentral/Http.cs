@@ -29,6 +29,11 @@ namespace RingCentral
             return GetClient(endpoint, queryParams).PostJsonAsync(requestBody);
         }
 
+        public Task<HttpResponseMessage> Put(string endpoint, object requestBody, object queryParams = null)
+        {
+            return GetClient(endpoint, queryParams).PutJsonAsync(requestBody);
+        }
+
         public Task<HttpResponseMessage> Delete(string endpoint, object queryParams = null)
         {
             return GetClient(endpoint, queryParams).DeleteAsync();

@@ -43,5 +43,11 @@ namespace RingCentral.Test
             response = rc.Delete("/restapi/v1.0/subscription/" + subscription.id).Result;
             Assert.AreEqual(HttpStatusCode.NoContent, response.StatusCode);
         }
+
+        [Test]
+        public void TestPut()
+        {
+            Assert.AreEqual(1, 2);
+        }
     }
 }
