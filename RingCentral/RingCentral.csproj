@@ -74,6 +74,8 @@
     <Compile Include="Model.cs" />
     <Compile Include="Temp.cs" />
     <Compile Include="Http.cs" />
+    <Compile Include="Generated\MessageStore.cs" />
+    <Compile Include="Generated\MessageStores.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Flurl">
