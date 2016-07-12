@@ -47,7 +47,18 @@ namespace RingCentral.Test
         [Test]
         public void TestPut()
         {
-            Assert.AreEqual(1, 2);
+            var messages = rc.RestApi().Account().Extension().MessageStore().List().Result;
+            var messageId = messages.records[0].id;
+            var response = rc.Put("/restapi/v1.0/account/~/extension/~/message-store/" + messageId, new { readStatus = "Read" }).Result;
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+
+            var readStatus = rc.RestApi().Account().Extension().MessageStore(messageId + "").Get().Result.readStatus;
+            Assert.AreEqual("Read", readStatus);
+
+            response = rc.Put("/restapi/v1.0/account/~/extension/~/message-store/" + messageId, new { readStatus = "Unread" }).Result;
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            readStatus = rc.RestApi().Account().Extension().MessageStore(messageId + "").Get().Result.readStatus;
+            Assert.AreEqual("Unread", readStatus);
         }
     }
 }

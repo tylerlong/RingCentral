@@ -2,7 +2,7 @@ namespace RingCentral
 {
     public partial class RestApi
     {
-        public Account Account(string _id = null)
+        public Account Account(string _id = "~")
         {
             return new Account(this, _id);
         }
@@ -17,7 +17,7 @@ namespace RingCentral
     }
     public partial class Account
     {
-        public Extension Extension(string _id = null)
+        public Extension Extension(string _id = "~")
         {
             return new Extension(this, _id);
         }
@@ -43,10 +43,6 @@ namespace RingCentral
         public Grant Grant(string _id = null)
         {
             return new Grant(this, _id);
-        }
-        public ProfileImage ProfileImage(string _id = null)
-        {
-            return new ProfileImage(this, _id);
         }
         public AddressBook AddressBook(string _id = null)
         {

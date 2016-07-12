@@ -76,6 +76,8 @@
     <Compile Include="Http.cs" />
     <Compile Include="Generated\MessageStore.cs" />
     <Compile Include="Generated\MessageStores.cs" />
+    <Compile Include="Generated\AddressBook.cs" />
+    <Compile Include="Generated\AuthzProfile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Flurl">

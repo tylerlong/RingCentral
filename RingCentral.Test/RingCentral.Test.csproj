@@ -58,6 +58,7 @@
     <Compile Include="ShippingOption.cs" />
     <Compile Include="TimezoneTest.cs" />
     <Compile Include="SubscriptionTest.cs" />
+    <Compile Include="MessageStoreTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
